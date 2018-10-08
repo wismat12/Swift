@@ -63,3 +63,46 @@ for date in lotto.keys{
 }
 
 //10
+//Napisz funkcję, która przyjmuje dwie liczby całkowite jako parametry i zwraca ich największy wspólny dzielnik. 
+func nwd(first: Int, second: Int) -> Int{
+    
+    var a: Int
+    
+    if(second != 0){
+        a = first % second
+        return nwd(first:second,second:a) 
+    }
+    return first 
+ 
+}
+var out = nwd(first:45,second:60)
+print(out)
+
+// jak same liczby nwd2(30,40) to Error: cannot assign to value: 'second' is a 'let' constant
+//immutable param
+func nwd2(first: Int, second: Int) -> (d:Int, fq:Int, sq:Int){
+    
+    var a: Int
+    var f = first
+    var s = second
+    
+    var ff = first
+    var ss = second
+    
+    while(ss != 0){
+        a = ff % ss
+        ff = ss
+        ss = a
+    }
+    return (ff, f/ff, s/ff)
+}
+print(nwd2(first:45,second:60))
+
+//Closure
+var lotto2: [String: Array<Int>] = [
+    "29-11-14" : [4, 5, 21, 30, 31, 49],
+    "27-11-14" : [5, 8, 10, 19, 23, 40]
+]
+for date in lotto2.keys{
+    lotto2[date].map({(number: Int) -> Int in return ((number%2)==0) ? 0 : 1})
+}
