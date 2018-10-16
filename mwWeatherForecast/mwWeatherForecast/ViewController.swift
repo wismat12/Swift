@@ -9,41 +9,32 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    let myURL = URL(string: "https://www.metaweather.com/api/location/search/?lattlong=50.068,-5.316")
-    
-    @IBOutlet weak var lbl_output1: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        //request.httpMethod = "GET"
-        //request.httpBody = try? JSONSerialization.data(withJSONObject: <#Any#>)
-        //request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-    }
-    
-    @IBAction func btn_getWeather(_ sender: Any) {
-        
-        let session = URLSession.shared
-        
-        let task = session.dataTask(with: myURL!) { (data, response, err) in
-            if data != nil {
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-                    
-                    lbl_output1.text = json
-             
-                } catch {
-                    print("Could not serialise")
+        WeatherDay.prepareForecastForAllDays(lat: "42.3601", long: "-71.0589") { (output, error) in
+            
+            if let error = error {
+                print(error)
+                return
+            }
+            if let dailyForecasts = output {
+                //jesli results length null
+                for result in dailyForecasts {
+                    print("\(result)\n\n")
                 }
                 
+            }else{
+                print(error!)
+                return
             }
+           
         }
-        task.resume()
-        
-        
+
     }
+    
+  
     
 
 }
