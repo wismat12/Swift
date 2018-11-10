@@ -15,6 +15,7 @@
 		3FE58546216C943200B519E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE58544216C943200B519E5 /* LaunchScreen.storyboard */; };
 		3FE58551216C943200B519E5 /* mwWeatherForecastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE58550216C943200B519E5 /* mwWeatherForecastTests.swift */; };
 		3FE5855C216C943200B519E5 /* mwWeatherForecastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE5855B216C943200B519E5 /* mwWeatherForecastUITests.swift */; };
+		95ED5B922177604A00F06A18 /* WeatherForecastStudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ED5B912177604A00F06A18 /* WeatherForecastStudio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3FE58557216C943200B519E5 /* mwWeatherForecastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mwWeatherForecastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE5855B216C943200B519E5 /* mwWeatherForecastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mwWeatherForecastUITests.swift; sourceTree = "<group>"; };
 		3FE5855D216C943200B519E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95ED5B912177604A00F06A18 /* WeatherForecastStudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastStudio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				3FE5853B216C943100B519E5 /* AppDelegate.swift */,
 				3FE5853D216C943100B519E5 /* ViewController.swift */,
 				3F6A42542175D0CD0008DFAF /* WeatherDay.swift */,
+				95ED5B912177604A00F06A18 /* WeatherForecastStudio.swift */,
 				3FE5853F216C943100B519E5 /* Main.storyboard */,
 				3FE58542216C943200B519E5 /* Assets.xcassets */,
 				3FE58544216C943200B519E5 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FE5853E216C943100B519E5 /* ViewController.swift in Sources */,
+				95ED5B922177604A00F06A18 /* WeatherForecastStudio.swift in Sources */,
 				3FE5853C216C943100B519E5 /* AppDelegate.swift in Sources */,
 				3F6A42552175D0CD0008DFAF /* WeatherDay.swift in Sources */,
 			);
@@ -436,16 +440,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = mwWeatherForecast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pl.agh.mwWeatherForecast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -453,16 +460,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = mwWeatherForecast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pl.agh.mwWeatherForecast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
